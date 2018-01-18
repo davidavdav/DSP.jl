@@ -1,6 +1,10 @@
 !(dirname(@__FILE__) in LOAD_PATH) && push!(LOAD_PATH, dirname(@__FILE__))
 using DSP, Compat, Compat.Test, FilterTestHelpers
 
+if VERSION >= v"0.7.0-DEV.3406"
+    using Random
+end
+
 #
 # filt with different filter forms
 #
